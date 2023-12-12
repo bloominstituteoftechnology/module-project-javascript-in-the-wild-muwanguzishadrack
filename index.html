@@ -117,7 +117,15 @@
       // 🧠 Split the string but do not use the reverse method of arrays. Let's do it manually.
       // 🧠 We suggest using a for loop. Research how to loop backwards over an array, starting at the last element.
       // 🧠 Use a ternary in the return statement.
-      const reverseString = () => {};
+      const reverseString = (str) => {
+        const reversed = [];
+        for (let i = str.length - 1; i >= 0; i--) {
+          reversed.push(str[i]);
+        }
+
+        const reversedStr = reversed.join("");
+        return reversedStr === str ? "It's a palindrome!" : reversedStr;
+      };
 
       // 👉 CHALLENGE 7
       // 🧠 The function zip receives three arrays as arguments. The three arrays are of the same length (which could be any length).
