@@ -139,7 +139,18 @@
       // ❗ Notes
       // 🧠 Even though object properties have no particular order, to avoid confusing
       // the test runner, please set in each object first name, then age, and finally jsLover.
-      const zip = () => {};
+      const zip = (names, years, jsLovers) => {
+        const zipped = [];
+        names.forEach((name, i) => {
+          let person = {
+            name: name,
+            born: years[i],
+            jsLover: jsLovers[i],
+          };
+          zipped.push(person);
+        });
+        return zipped;
+      };
 
       // 🧪 TESTS, do not work below this line
       // 🧪 TESTS, do not work below this line
