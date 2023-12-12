@@ -92,7 +92,10 @@
       // recognize({}) // should return "Hidden Person Rocks!"
       // ❗ Notes
       // 🧠 Try using destructuring to grab the name, and a return followed by a ternary expression.
-      const recognize = () => {};
+      const recognize = (user) => {
+        const { name } = user;
+        return name ? `${name} Rules!` : "Hidden Person Rocks!";
+      };
 
       // 👉 CHALLENGE 5
       // 🧠 The function processBooleans takes an array of Booleans represented using integers (1/0 instead of true/false)
