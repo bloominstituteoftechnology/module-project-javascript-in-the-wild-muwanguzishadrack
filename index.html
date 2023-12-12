@@ -77,7 +77,11 @@
       // devGreet(false, false) // should return "Hey, I am a backend dev and I am sad"
       // ❗ Notes
       // 🧠 Use ternary expressions to construct the string.
-      const devGreet = () => {};
+      const devGreet = (isFrontend, isHappy) => {
+        return `Hey, I am a ${
+          isFrontend ? "frontend" : "backend"
+        } dev and I am ${isHappy ? "happy" : "sad"}`;
+      };
 
       // 👉 CHALLENGE 4
       // 🧠 The function recognize takes an object representing a user.
