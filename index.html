@@ -59,7 +59,14 @@
       // 🧠 Try using the ternary operator instead of a conditional statement when deciding what to return.
       // 🧠 So instead of doing `if ('foo') return 'bar' else return 'baz'` do `return 'foo' ? 'bar' : 'baz'`
       // 🧠 The above recommendations allow to write the whole function body in just two clean lines!
-      const headAndTail = () => {};
+      const headAndTail = (arr) => {
+        // if (arr.length === 0) {
+        //   return "This array is empty";
+        // }
+
+        let [head, ...tail] = arr;
+        return arr.length ? [head, tail] : "This array is empty";
+      };
 
       // 👉 CHALLENGE 3
       // 🧠 The function devGreet takes an isFrontend Boolean, and an isHappy Boolean, as arguments.
